@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Juan Joel Navarro Vargas | Profesor de Programación, POO, Java, Kotlin & Python</title>
+  <meta name="description" content="Tutorías personalizadas de programación desde cero y nivel universitario con Juan Joel Navarro Vargas. Especialista en POO, Java, Kotlin, Android, Python, MVC y MVP. +4 años de experiencia como Desarrollador de Software." />
+  <meta name="keywords" content="profesor de programación, tutorías Java, tutorías POO, aprender Kotlin, Android Studio, Python, MVC, MVP, asesoría proyectos programación Colombia, Juan Joel Navarro Vargas" />
+  <meta name="author" content="Juan Joel Navarro Vargas" />
+
+  <!-- Open Graph / WhatsApp / LinkedIn Preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Juan Joel Navarro Vargas | Mentor & Profesor de Programación (POO, Java, Kotlin, Python)" />
+  <meta property="og:description" content="Aprende a programar desde cero o domina POO, estructuras y proyectos universitarios con mentorías 1 a 1 personalizadas. $20.000 COP/hora." />
+  <meta property="og:image" content="ProfileLk.png" />
+
+  <!-- Google Fonts: Plus Jakarta Sans, Space Grotesk & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="ProfileAvatar.png" />
+</head>
+<body>
+  <!-- Animated Background Layer -->
+  <div class="bg-canvas-wrapper" aria-hidden="true">
+    <div class="aurora-blob blob-1"></div>
+    <div class="aurora-blob blob-2"></div>
+    <div class="aurora-blob blob-3"></div>
+    <canvas id="networkCanvas"></canvas>
+    <div class="grid-overlay"></div>
+  </div>
+
+  <!-- Top Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#inicio" class="brand-logo" aria-label="Inicio - Joel Navarro">
+        <div class="brand-avatar-mini">
+          <img src="ProfileAvatar.png" alt="Juan Joel Navarro Vargas" />
+          <span class="status-dot" title="Disponible para tutorías"></span>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">Joel <span>Navarro</span></span>
+          <span class="brand-role">Software Dev &amp; Mentor POO</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Navegación principal">
+        <a href="#inicio" class="nav-link active">Inicio</a>
+        <a href="#sobre-mi" class="nav-link">Sobre Mí</a>
+        <a href="#tecnologias" class="nav-link">Tecnologías &amp; IDEs</a>
+        <a href="#proyectos" class="nav-link">Proyectos</a>
+        <a href="#precios" class="nav-link">Precios (COP)</a>
+        <a href="#resenas" class="nav-link">Reseñas <span class="nav-badge" id="navReviewCount">8</span></a>
+        <a href="https://wa.me/573209430835?text=Hola%20Joel%2C%20vi%20tu%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20las%20tutor%C3%ADas%20de%20programaci%C3%B3n%20(%2420.000%20COP%2Fhora)." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm mobile-nav-cta">
+          <i data-lucide="message-circle"></i>
+          <span>Agendar por WhatsApp ($20.000 COP/h)</span>
+        </a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Cambiar tema de color" title="Cambiar entre modo suave claro y modo oscuro">
+          <i data-lucide="moon" class="icon-moon"></i>
+          <i data-lucide="sun" class="icon-sun"></i>
+        </button>
+
+        <a href="https://wa.me/573209430835?text=Hola%20Joel%2C%20vi%20tu%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20las%20tutor%C3%ADas%20de%20programaci%C3%B3n." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm nav-cta">
+          <i data-lucide="message-circle"></i>
+          <span>Agendar Clase</span>
+        </a>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn" type="button" aria-label="Abrir menú">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero-section" id="inicio">
+      <div class="container hero-grid">
+        <!-- Hero Left Column -->
+        <div class="hero-content reveal-up">
+          <div class="hero-pill">
+            <span class="pulse-indicator"></span>
+            <span>Ing. en Inteligencia Artificial y Ciencia de Datos • +4 Años Dev</span>
+          </div>
+
+          <h1 class="hero-title">
+            Domina la <span class="gradient-text">Programación y POO</span> con mentorías personalizadas a tu ritmo.
+          </h1>
+
+          <p class="hero-description">
+            Hola, soy <strong>Juan Joel Navarro Vargas</strong>. Desarrollador de Software con <strong>4 años de experiencia</strong> y certificado en <strong>Programación Orientada a Objetos (POO)</strong>. Te enseño desde cero absoluto hasta arquitecturas avanzadas (<strong>MVC, MVP</strong>), desarrollo móvil en <strong>Android</strong> y preparación de proyectos universitarios adaptándome a tu IDE favorito.
+          </p>
+
+          <!-- Highlight Price & Value Strip -->
+          <div class="hero-price-strip">
+            <div class="price-pill-card">
+              <div class="price-pill-icon">
+                <i data-lucide="clock"></i>
+              </div>
+              <div>
+                <span class="price-pill-label">Asesoría por Hora</span>
+                <strong class="price-pill-amount">$20.000 <small>COP / hora</small></strong>
+              </div>
+            </div>
+            <div class="price-pill-divider"></div>
+            <div class="price-pill-card">
+              <div class="price-pill-icon accent-purple">
+                <i data-lucide="folder-git-2"></i>
+              </div>
+              <div>
+                <span class="price-pill-label">Proyectos &amp; Entregas</span>
+                <strong class="price-pill-amount">Cotización a medida</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTA Buttons -->
+          <div class="hero-actions">
+            <a href="https://wa.me/573209430835?text=Hola%20Joel%2C%20quiero%20agendar%20una%20tutor%C3%ADa%20personalizada%20de%20programaci%C3%B3n%20(%2420.000%20COP%2Fhora)." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
+              <i data-lucide="sparkles"></i>
+              <span>Reservar Tutoría ($20.000 COP/h)</span>
+            </a>
+            <a href="#precios" class="btn btn-glass btn-lg">
+              <i data-lucide="calculator"></i>
+              <span>Simular Costo en COP</span>
+            </a>
+          </div>
+
+          <!-- Social & Professional Links -->
+          <div class="hero-socials">
+            <span class="socials-label">Conecta conmigo:</span>
+            <div class="social-buttons">
+              <a href="https://www.linkedin.com/in/joelru?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="social-chip" title="Perfil oficial de LinkedIn">
+                <svg class="social-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                <span>LinkedIn</span>
+                <i data-lucide="arrow-up-right" class="chip-arrow"></i>
+              </a>
+              <a href="https://github.com/Joelru" target="_blank" rel="noopener noreferrer" class="social-chip" title="Perfil de GitHub">
+                <svg class="social-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+                <span>GitHub (@Joelru)</span>
+                <i data-lucide="arrow-up-right" class="chip-arrow"></i>
+              </a>
+              <a href="https://findpethouse.vercel.app/" target="_blank" rel="noopener noreferrer" class="social-chip" title="CEO & Creador de FindPetHouse">
+                <i data-lucide="globe" class="social-icon-sm"></i>
+                <span>FindPetHouse</span>
+                <i data-lucide="arrow-up-right" class="chip-arrow"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Right Column: Profile Showcase Card with 3D Tilt & Floating Badges -->
+        <div class="hero-visual reveal-scale">
+          <div class="profile-showcase-wrapper" id="tiltCard">
+            <!-- Decorative Glowing Ring -->
+            <div class="showcase-glow"></div>
+
+            <!-- Main Profile Card -->
+            <div class="profile-card-main">
+              <div class="profile-card-banner">
+                <img src="SimpleBanner.png" alt="Banner Backend & Android Developer - Joel Navarro" />
+              </div>
+
+              <div class="profile-photo-container">
+                <div class="profile-avatar-ring">
+                  <img src="ProfileAvatar.png" alt="Juan Joel Navarro Vargas - Profesor de Programación y Desarrollador de Software" class="profile-main-img" />
+                </div>
+                <div class="verified-mentor-badge" title="Certificado en Programación Orientada a Objetos">
+                  <i data-lucide="shield-check"></i>
+                  <span>Certificado POO</span>
+                </div>
+              </div>
+
+              <div class="profile-card-body">
+                <div class="profile-identity">
+                  <h2>Juan Joel Navarro Vargas</h2>
+                  <p class="profile-subtitle">Ing. IA y Ciencia de Datos • Backend &amp; Mobile Dev</p>
+                </div>
+
+                <!-- Mini Code Snippet inside Card -->
+                <div class="profile-code-box">
+                  <div class="code-dots">
+                    <span></span><span></span><span></span>
+                    <small>MentorPOO.java</small>
+                  </div>
+                  <pre><code><span class="kw">public class</span> <span class="cls">JoelNavarro</span> <span class="kw">extends</span> <span class="cls">Mentor</span> {
+  <span class="kw">final int</span> expYears = <span class="num">4</span>;
+  <span class="kw">String</span>[] stack = {<span class="str">"Java"</span>, <span class="str">"Kotlin"</span>, <span class="str">"Python"</span>};
+  <span class="kw">String</span>[] arch  = {<span class="str">"POO"</span>, <span class="str">"MVC"</span>, <span class="str">"MVP"</span>};
+}</code></pre>
+                </div>
+
+                <div class="profile-quick-metrics">
+                  <div class="metric-item">
+                    <strong>+4 Años</strong>
+                    <span>Exp. Desarrollo</span>
+                  </div>
+                  <div class="metric-item">
+                    <strong>100%</strong>
+                    <span>Personalizado</span>
+                  </div>
+                  <div class="metric-item">
+                    <strong id="heroRatingStat">5.0 ★</strong>
+                    <span>Calificación</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Element 1: Languages -->
+            <div class="floating-badge badge-top-left">
+              <div class="fb-icon fb-java">
+                <i data-lucide="coffee"></i>
+              </div>
+              <div class="fb-text">
+                <strong>Java • Kotlin • Python</strong>
+                <span>Desde 0 a Avanzado</span>
+              </div>
+            </div>
+
+            <!-- Floating Element 2: IDEs -->
+            <div class="floating-badge badge-bottom-right">
+              <div class="fb-icon fb-ide">
+                <i data-lucide="terminal-square"></i>
+              </div>
+              <div class="fb-text">
+                <strong>Me adapto a tu IDE</strong>
+                <span>IntelliJ • NetBeans • Android Studio • VS Code</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= STATS & VALUE PROPOSITION STRIP ================= -->
+    <section class="stats-strip-section">
+      <div class="container">
+        <div class="stats-grid reveal-up">
+          <div class="stat-card">
+            <div class="stat-icon"><i data-lucide="award"></i></div>
+            <div class="stat-info">
+              <h3>+4 Años</h3>
+              <p>Experiencia real creando software en producción</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon"><i data-lucide="boxes"></i></div>
+            <div class="stat-info">
+              <h3>Especialista POO</h3>
+              <p>Certificado en Programación Orientada a Objetos, MVC y MVP</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon"><i data-lucide="smartphone"></i></div>
+            <div class="stat-info">
+              <h3>Apps &amp; Algoritmos</h3>
+              <p>Desarrollo Móvil Android (Kotlin/Java) y programas de escritorio/consola</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-icon"><i data-lucide="brain-circuit"></i></div>
+            <div class="stat-info">
+              <h3>IA &amp; Data Science</h3>
+              <p>Formación en Ingeniería en Inteligencia Artificial y Ciencia de Datos</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SOBRE MÍ & METODOLOGÍA ================= -->
+    <section class="section about-section" id="sobre-mi">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-tag"><i data-lucide="user-check"></i> Perfil Profesional y Académico</span>
+          <h2 class="section-title">Más que clases teóricas: <span class="gradient-text">Aprende con un Desarrollador Real</span></h2>
+          <p class="section-subtitle">
+            Entiendo exactamente por qué muchos estudiantes se frustran con la programación en la universidad. Mi objetivo es explicarte con claridad, paciencia y ejemplos prácticos hasta que domines cada línea de código.
+          </p>
+        </div>
+
+        <div class="about-bento-grid">
+          <!-- Card 1: Bio Principal -->
+          <div class="bento-card bento-bio reveal-up">
+            <div class="bento-badge">¿Quién es tu tutor?</div>
+            <h3>Juan Joel Navarro Vargas</h3>
+            <p>
+              Soy estudiante de <strong>Ingeniería en Inteligencia Artificial y Ciencia de Datos</strong> y cuento con más de <strong>4 años de trayectoria como Desarrollador de Software</strong>. A lo largo de mi carrera he diseñado y desplegado plataformas web, APIs backend y aplicaciones móviles nativas, además de ser fundador de proyectos propios como <strong>FindPetHouse</strong> y <strong>KronoTech</strong>.
+            </p>
+            <p>
+              Cuento con <strong>certificaciones en Programación Orientada a Objetos (POO)</strong>, mi mayor especialidad. Sé cómo traducir conceptos abstractos como <em>polimorfismo, herencia, encapsulamiento, interfaces, colecciones y patrones MVC/MVP</em> en explicaciones visuales y fáciles de aplicar en tus parciales o proyectos.
+            </p>
+            <div class="bio-highlights">
+              <div class="bio-highlight-item">
+                <i data-lucide="check-circle-2"></i>
+                <span>Paciencia 100% garantizada si estás empezando desde cero</span>
+              </div>
+              <div class="bio-highlight-item">
+                <i data-lucide="check-circle-2"></i>
+                <span>Explicación línea por línea adaptada a la rúbrica de tu universidad</span>
+              </div>
+              <div class="bio-highlight-item">
+                <i data-lucide="check-circle-2"></i>
+                <span>Buenas prácticas de ingeniería de software desde el primer día</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Modalidades de Enseñanza -->
+          <div class="bento-card bento-methodology reveal-up">
+            <div class="bento-badge">Metodología Adaptativa</div>
+            <h3>¿Cómo funcionan mis tutorías?</h3>
+            <ul class="method-steps">
+              <li>
+                <span class="step-num">01</span>
+                <div>
+                  <strong>Diagnóstico de tu tema o proyecto</strong>
+                  <p>Me envías por WhatsApp el taller, temario, requerimiento universitario o tu meta de aprendizaje desde cero.</p>
+                </div>
+              </li>
+              <li>
+                <span class="step-num">02</span>
+                <div>
+                  <strong>Trabajamos en tu propio entorno (IDE)</strong>
+                  <p>No te obligo a cambiar de programa: nos conectamos y trabajamos directamente en NetBeans, IntelliJ, Android Studio o VS Code.</p>
+                </div>
+              </li>
+              <li>
+                <span class="step-num">03</span>
+                <div>
+                  <strong>Práctica en vivo + Código documentado</strong>
+                  <p>Construimos la solución juntos, asegurándome de que entiendas el "porqué" de cada clase y método para que puedas sustentarlo con total seguridad.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 3: Interactive Code Showcase (POO / Kotlin / Python / MVC) -->
+          <div class="bento-card bento-code-interactive reveal-up">
+            <div class="code-showcase-header">
+              <div>
+                <span class="bento-badge">Vista Previa Interactiva</span>
+                <h3>Lo que aprenderás a estructurar sin miedo</h3>
+              </div>
+              <div class="code-tabs" role="tablist">
+                <button class="code-tab active" data-lang="java" type="button">Java (POO)</button>
+                <button class="code-tab" data-lang="kotlin" type="button">Kotlin (Android)</button>
+                <button class="code-tab" data-lang="python" type="button">Python (IA / Lógica)</button>
+                <button class="code-tab" data-lang="mvc" type="button">Patrón MVC / MVP</button>
+              </div>
+            </div>
+
+            <div class="ide-window">
+              <div class="ide-topbar">
+                <div class="ide-window-controls">
+                  <span class="dot-red"></span>
+                  <span class="dot-yellow"></span>
+                  <span class="dot-green"></span>
+                </div>
+                <div class="ide-filename" id="ideFilename">EstudianteUniversitario.java — IntelliJ IDEA / NetBeans</div>
+                <div class="ide-badge" id="ideBadge">POO Certificado</div>
+              </div>
+              <div class="ide-body">
+                <pre id="ideCodeContent"></pre>
+              </div>
+              <div class="ide-footer">
+                <span id="ideLearningNote"><i data-lucide="lightbulb"></i> Dominarás Herencia, Polimorfismo, Clases Abstractas, Interfaces y Manejo de Excepciones.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= TECNOLOGÍAS, LENGUAJES & IDEs ================= -->
+    <section class="section tech-section" id="tecnologias">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-tag"><i data-lucide="cpu"></i> Stack de Enseñanza y Desarrollo</span>
+          <h2 class="section-title">Lenguajes, Arquitecturas y <span class="gradient-text">Entornos que Manejo</span></h2>
+          <p class="section-subtitle">
+            Tanto si necesitas dar tus primeros pasos en lógica de programación como si estás construyendo una app móvil en Android o un proyecto semestral con arquitectura MVC/MVP.
+          </p>
+        </div>
+
+        <!-- Languages & Specialties Grid -->
+        <div class="tech-cards-grid">
+          <!-- Java -->
+          <article class="tech-card reveal-up">
+            <div class="tech-card-top">
+              <div class="tech-icon-wrap java-grad">
+                <i data-lucide="coffee"></i>
+              </div>
+              <span class="tech-level-tag">Especialidad Principal</span>
+            </div>
+            <h3>Java &amp; POO Avanzado</h3>
+            <p>
+              Desde lógica básica (condicionales, ciclos, arreglos, matrices) hasta <strong>Programación Orientada a Objetos completa</strong>, estructuras de datos (Listas, Pilas, Colas, Árboles), interfaces gráficas (Swing/JavaFX), conexión a bases de datos (JDBC) y Spring Boot.
+            </p>
+            <div class="tech-tags">
+              <span>Desde Cero</span>
+              <span>POO Certificado</span>
+              <span>Swing / GUI</span>
+              <span>Estructuras de Datos</span>
+              <span>Spring Boot</span>
+            </div>
+          </article>
+
+          <!-- Kotlin -->
+          <article class="tech-card reveal-up">
+            <div class="tech-card-top">
+              <div class="tech-icon-wrap kotlin-grad">
+                <i data-lucide="smartphone"></i>
+              </div>
+              <span class="tech-level-tag">Apps Móviles &amp; General</span>
+            </div>
+            <h3>Kotlin (Android &amp; Desktop)</h3>
+            <p>
+              Especializado en el desarrollo de <strong>aplicaciones móviles nativas para Android</strong> y también programas estándar de consola/escritorio. Consumo de APIs REST, diseño de interfaces modernas, manejo de actividades/fragments y corrutinas.
+            </p>
+            <div class="tech-tags">
+              <span>Android Nativo</span>
+              <span>Programas Consola</span>
+              <span>POO en Kotlin</span>
+              <span>APIs REST</span>
+              <span>UI Mobile</span>
+            </div>
+          </article>
+
+          <!-- Python -->
+          <article class="tech-card reveal-up">
+            <div class="tech-card-top">
+              <div class="tech-icon-wrap python-grad">
+                <i data-lucide="terminal"></i>
+              </div>
+              <span class="tech-level-tag">Lógica, POO &amp; Datos</span>
+            </div>
+            <h3>Python &amp; Ciencia de Datos</h3>
+            <p>
+              Ideal para aprender a programar desde cero con sintaxis limpia, algoritmos universitarios, automatización, <strong>POO en Python</strong> y bases de análisis de datos e Inteligencia Artificial.
+            </p>
+            <div class="tech-tags">
+              <span>Algoritmia desde 0</span>
+              <span>POO Python</span>
+              <span>estructuras</span>
+              <span>Data Science Intro</span>
+            </div>
+          </article>
+
+          <!-- Arquitecturas POO / MVC / MVP -->
+          <article class="tech-card reveal-up">
+            <div class="tech-card-top">
+              <div class="tech-icon-wrap arch-grad">
+                <i data-lucide="layers"></i>
+              </div>
+              <span class="tech-level-tag">Arquitectura de Software</span>
+            </div>
+            <h3>Patrones POO, MVC y MVP</h3>
+            <p>
+              Te enseño a separar responsabilidades como un profesional: <strong>Modelo-Vista-Controlador (MVC)</strong> y <strong>Modelo-Vista-Presentador (MVP)</strong>, diagramas de clases UML, principios SOLID y persistencia de datos.
+            </p>
+            <div class="tech-tags">
+              <span>Arquitectura MVC</span>
+              <span>Arquitectura MVP</span>
+              <span>Diagramas UML</span>
+              <span>Código Limpio</span>
+            </div>
+          </article>
+        </div>
+
+        <!-- IDEs Adaptability Banner -->
+        <div class="ide-adapt-banner reveal-up">
+          <div class="ide-adapt-info">
+            <span class="ide-pill-small"><i data-lucide="sliders"></i> 100% Adaptable a tu Universidad</span>
+            <h3>¿Tu profesor exige un IDE específico? ¡Me adapto sin problema!</h3>
+            <p>
+              Sabemos que cada universidad o instituto técnico trabaja con herramientas distintas. Conozco a fondo los atajos, configuración de proyectos, depuradores y librerías de los principales entornos:
+            </p>
+          </div>
+          <div class="ide-badges-grid">
+            <div class="ide-item-card">
+              <div class="ide-item-icon intellij"><i data-lucide="code-2"></i></div>
+              <div>
+                <strong>IntelliJ IDEA</strong>
+                <span>Java, Kotlin, Maven/Gradle</span>
+              </div>
+            </div>
+            <div class="ide-item-card">
+              <div class="ide-item-icon netbeans"><i data-lucide="box"></i></div>
+              <div>
+                <strong>Apache NetBeans</strong>
+                <span>Java Ant/Maven, JFrame GUI</span>
+              </div>
+            </div>
+            <div class="ide-item-card">
+              <div class="ide-item-icon android"><i data-lucide="tablet-smartphone"></i></div>
+              <div>
+                <strong>Android Studio</strong>
+                <span>Apps Móviles Kotlin &amp; Java</span>
+              </div>
+            </div>
+            <div class="ide-item-card">
+              <div class="ide-item-icon vscode"><i data-lucide="file-code-2"></i></div>
+              <div>
+                <strong>VS Code</strong>
+                <span>Python, Java, Web &amp; Git</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROYECTOS & PORTAFOLIO ================= -->
+    <section class="section projects-section" id="proyectos">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-tag"><i data-lucide="rocket"></i> Portafolio Real en Producción</span>
+          <h2 class="section-title">Proyectos Propios y <span class="gradient-text">Arquitecturas Desarrolladas</span></h2>
+          <p class="section-subtitle">
+            Aprenderás con alguien que construye productos reales. Estos son algunos de mis proyectos desplegados en producción y repositorios de arquitectura de software.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: FindPetHouse -->
+          <article class="project-card featured-project reveal-up">
+            <div class="project-preview preview-findpethouse">
+              <div class="browser-bar">
+                <div class="browser-dots"><span></span><span></span><span></span></div>
+                <div class="browser-url"><i data-lucide="lock"></i> findpethouse.vercel.app</div>
+                <span class="live-status-badge">En Producción</span>
+              </div>
+              <div class="project-visual-canvas">
+                <div class="visual-icon-circle">
+                  <i data-lucide="heart-handshake"></i>
+                </div>
+                <h4>FindPetHouse</h4>
+                <p>Plataforma Digital para el Bienestar y Adopción de Mascotas</p>
+                <div class="visual-pills">
+                  <span>Founder &amp; Lead Dev</span>
+                  <span>Full Stack</span>
+                  <span>UX Moderna</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-role-badge">Creador &amp; Dueño</span>
+                <span class="project-type">Plataforma Digital Web</span>
+              </div>
+              <h3>FindPetHouse — Plataforma Digital</h3>
+              <p>
+                Plataforma digital completa de la cual soy propietario y desarrollador principal. Diseñada con arquitectura escalable, interfaz intuitiva y flujo completo para conectar hogares con mascotas.
+              </p>
+              <div class="project-tech-list">
+                <span>Arquitectura Modular</span>
+                <span>Diseño Responsivo</span>
+                <span>Producción en Vercel</span>
+              </div>
+              <div class="project-links">
+                <a href="https://findpethouse.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  <i data-lucide="external-link"></i>
+                  <span>Visitar FindPetHouse</span>
+                </a>
+                <a href="https://github.com/Joelru" target="_blank" rel="noopener noreferrer" class="btn btn-glass btn-sm">
+                  <i data-lucide="github"></i>
+                  <span>Ver GitHub</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: KronoTech -->
+          <article class="project-card featured-project reveal-up">
+            <div class="project-preview preview-kronotech">
+              <div class="browser-bar">
+                <div class="browser-dots"><span></span><span></span><span></span></div>
+                <div class="browser-url"><i data-lucide="lock"></i> kronotech.vercel.app</div>
+                <span class="live-status-badge status-ready">Arquitectura Lista</span>
+              </div>
+              <div class="project-visual-canvas">
+                <div class="visual-icon-circle krono-circle">
+                  <i data-lucide="shopping-bag"></i>
+                </div>
+                <h4>KronoTech</h4>
+                <p>Plataforma E-Commerce de Tecnología de Alto Rendimiento</p>
+                <div class="visual-pills">
+                  <span>E-Commerce Engine</span>
+                  <span>Catálogo &amp; Carrito</span>
+                  <span>UI Premium</span>
+                </div>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-role-badge badge-teal">Desarrollo Completo</span>
+                <span class="project-type">E-Commerce Platform</span>
+              </div>
+              <h3>KronoTech — E-Commerce Digital</h3>
+              <p>
+                Plataforma tipo E-Commerce con desarrollo técnico 100% finalizado (arquitectura de tienda, interfaz de usuario moderna y lógica de compra lista en etapa previa a carga de catálogo de productos).
+              </p>
+              <div class="project-tech-list">
+                <span>E-Commerce Flow</span>
+                <span>Estado &amp; Componentes</span>
+                <span>Despliegue Cloud</span>
+              </div>
+              <div class="project-links">
+                <a href="https://kronotech.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                  <i data-lucide="external-link"></i>
+                  <span>Explorar KronoTech</span>
+                </a>
+                <a href="https://github.com/Joelru" target="_blank" rel="noopener noreferrer" class="btn btn-glass btn-sm">
+                  <i data-lucide="github"></i>
+                  <span>Código &amp; Perfil</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Ecosistema POO, MVC y MVP -->
+          <article class="project-card project-card-wide reveal-up">
+            <div class="wide-project-content">
+              <div class="wide-project-left">
+                <div class="project-meta">
+                  <span class="project-role-badge badge-indigo">Especialidad Académica &amp; Profesional</span>
+                  <span class="project-type">Java • Kotlin • Python</span>
+                </div>
+                <h3>Soluciones de Software en POO, Arquitectura MVC y MVP</h3>
+                <p>
+                  Además de mis plataformas web, he desarrollado múltiples sistemas de escritorio, APIs y aplicaciones móviles Android aplicando estrictamente <strong>Programación Orientada a Objetos (POO)</strong>, <strong>Modelo-Vista-Controlador (MVC)</strong> y <strong>Modelo-Vista-Presentador (MVP)</strong>: sistemas POS, gestores académicos, apps móviles en Kotlin/Java con consumo de APIs y estructuras de datos avanzadas.
+                </p>
+                <div class="arch-mini-grid">
+                  <div class="arch-mini-item">
+                    <i data-lucide="check-square"></i>
+                    <span><strong>POO Puro:</strong> Herencia, Polimorfismo, Interfaces, Genéricos y Archivos/BD.</span>
+                  </div>
+                  <div class="arch-mini-item">
+                    <i data-lucide="check-square"></i>
+                    <span><strong>MVC &amp; MVP:</strong> Separación limpia entre lógica de negocio, vistas (Swing/JavaFX/Android XML) y controladores.</span>
+                  </div>
+                </div>
+              </div>
+              <div class="wide-project-right">
+                <div class="github-spotlight-card">
+                  <div class="gh-header">
+                    <svg class="gh-logo" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+                    <div>
+                      <strong>github.com/Joelru</strong>
+                      <span>Repositorios &amp; Proyectos</span>
+                    </div>
+                  </div>
+                  <p>Explora mis repositorios públicos, código fuente y proyectos en Java, Kotlin y arquitecturas modernas.</p>
+                  <div class="gh-actions">
+                    <a href="https://github.com/Joelru" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block">
+                      <i data-lucide="git-branch"></i>
+                      <span>Ver Perfil de GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/joelru?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="btn btn-glass btn-block">
+                      <i data-lucide="linkedin"></i>
+                      <span>Conectar en LinkedIn</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PRECIOS, PLANES & SIMULADOR ================= -->
+    <section class="section pricing-section" id="precios">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-tag"><i data-lucide="wallet"></i> Tarifas en Pesos Colombianos (COP)</span>
+          <h2 class="section-title">Planes de Tutoría y <span class="gradient-text">Asesoría de Proyectos</span></h2>
+          <p class="section-subtitle">
+            Precios en <strong>Pesos Colombianos (COP)</strong> pensados para estudiantes universitarios, técnicos e independientes en toda Colombia. Atención personalizada 1 a 1.
+          </p>
+          <div class="colombia-payment-pills">
+            <span>🇨🇴 Colombia (COP)</span>
+            <span>• Nequi</span>
+            <span>• Daviplata</span>
+            <span>• Transferencia Bancaria / Bre-B</span>
+          </div>
+        </div>
+
+        <div class="pricing-layout">
+          <!-- Plan 1: Por Hora ($20.000 COP) -->
+          <div class="pricing-card popular-plan reveal-up">
+            <div class="popular-ribbon">Más Solicitado en Colombia</div>
+            <div class="plan-header">
+              <span class="plan-category">Tutoría 1 a 1 en Vivo</span>
+              <h3>Asesoría sobre Temas Específicos o Desde Cero</h3>
+              <div class="plan-price">
+                <span class="currency">$</span>
+                <span class="amount">20.000</span>
+                <div class="price-period">
+                  <strong>COP (Pesos)</strong>
+                  <span>/ por hora</span>
+                </div>
+              </div>
+              <p class="plan-desc">
+                Ideal para despejar dudas puntuales, preparar parciales, entender POO o aprender a programar desde cero paso a paso.
+              </p>
+            </div>
+
+            <ul class="plan-features">
+              <li><i data-lucide="check"></i> <span><strong>Clase 100% personalizada</strong> en vivo (Meet / Discord / Zoom)</span></li>
+              <li><i data-lucide="check"></i> <span>Explicación desde cero o del tema exacto que estás viendo en clase</span></li>
+              <li><i data-lucide="check"></i> <span>Lenguajes: <strong>Java, Kotlin (Móvil o Normal) y Python</strong></span></li>
+              <li><i data-lucide="check"></i> <span>Nos adaptamos a tu IDE: <strong>NetBeans, IntelliJ, Android Studio o VS Code</strong></span></li>
+              <li><i data-lucide="check"></i> <span>Resolución de ejercicios en vivo + entrega del código explicado</span></li>
+            </ul>
+
+            <a href="https://wa.me/573209430835?text=Hola%20Joel%2C%20me%20interesa%20agendar%20una%20tutor%C3%ADa%20por%20hora%20(%2420.000%20COP%2Fhora)%20sobre%20un%20tema%20de%20programaci%C3%B3n." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg btn-block">
+              <i data-lucide="message-circle"></i>
+              <span>Agendar Hora ($20.000 COP)</span>
+            </a>
+          </div>
+
+          <!-- Plan 2: Proyectos a Medida -->
+          <div class="pricing-card project-plan reveal-up">
+            <div class="plan-header">
+              <span class="plan-category">Desarrollo &amp; Acompañamiento</span>
+              <h3>Realización y Asesoría de Proyectos</h3>
+              <div class="plan-price custom-price">
+                <span class="amount-text">Precio Variable (COP)</span>
+                <span class="price-subnote">Cotización en Pesos Colombianos según alcance</span>
+              </div>
+              <p class="plan-desc">
+                ¿Tienes una entrega final de semestre, una app Android en Kotlin/Java o un sistema en arquitectura POO, MVC o MVP? Cotiza según tu alcance.
+              </p>
+            </div>
+
+            <ul class="plan-features">
+              <li><i data-lucide="check"></i> <span><strong>Cotización justa e inmediata</strong> revisando el documento de tu proyecto</span></li>
+              <li><i data-lucide="check"></i> <span>Arquitecturas limpias <strong>POO, MVC y MVP</strong> listas para sustentar</span></li>
+              <li><i data-lucide="check"></i> <span>Aplicaciones móviles en <strong>Android Studio (Kotlin / Java)</strong></span></li>
+              <li><i data-lucide="check"></i> <span>Código comentado y sesión de explicación para que domines tu entrega</span></li>
+              <li><i data-lucide="check"></i> <span>Acompañamiento continuo hasta la entrega funcional</span></li>
+            </ul>
+
+            <a href="https://wa.me/573209430835?text=Hola%20Joel%2C%20quiero%20consultar%20el%20precio%20para%20un%20proyecto%20de%20programaci%C3%B3n.%20Te%20comento%20los%20detalles%3A" target="_blank" rel="noopener noreferrer" class="btn btn-glass btn-lg btn-block">
+              <i data-lucide="file-text"></i>
+              <span>Preguntar Precio de mi Proyecto</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Interactive Quick Calculator & WhatsApp Generator -->
+        <div class="simulator-box reveal-up">
+          <div class="simulator-header">
+            <div class="sim-title-wrap">
+              <div class="sim-icon"><i data-lucide="sliders-horizontal"></i></div>
+              <div>
+                <h3>Armador Rápido de Solicitud por WhatsApp</h3>
+                <p>Selecciona lo que necesitas y envía tu mensaje listo al <strong>+57 320 943 0835</strong> en segundos.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="simulator-grid">
+            <div class="sim-field">
+              <label for="simModality">1. ¿Qué necesitas hoy?</label>
+              <select id="simModality">
+                <option value="hora">Tutoría por Hora ($20.000 COP / hora)</option>
+                <option value="cero">Aprender a Programar desde Cero ($20.000 COP / hora)</option>
+                <option value="proyecto">Cotizar Realización / Asesoría de Proyecto (Precio variable)</option>
+              </select>
+            </div>
+
+            <div class="sim-field" id="simHoursGroup">
+              <label for="simHours">2. Cantidad de horas</label>
+              <div class="hours-stepper">
+                <button type="button" id="decHours" aria-label="Disminuir horas">−</button>
+                <input type="number" id="simHours" value="2" min="1" max="20" readonly />
+                <button type="button" id="incHours" aria-label="Aumentar horas">+</button>
+              </div>
+            </div>
+
+            <div class="sim-field">
+              <label for="simLang">3. Lenguaje o Enfoque</label>
+              <select id="simLang">
+                <option value="Java (POO)">Java (POO / Estructuras / GUI)</option>
+                <option value="Kotlin (Android / Móvil)">Kotlin (Apps Móviles Android)</option>
+                <option value="Kotlin (Programas Normal)">Kotlin (Consola / General)</option>
+                <option value="Python">Python (Desde cero / POO / Datos)</option>
+                <option value="Arquitectura MVC / MVP">Arquitectura POO, MVC o MVP</option>
+              </select>
+            </div>
+
+            <div class="sim-field">
+              <label for="simIde">4. IDE Preferido</label>
+              <select id="simIde">
+                <option value="NetBeans">Apache NetBeans</option>
+                <option value="IntelliJ IDEA">IntelliJ IDEA</option>
+                <option value="Android Studio">Android Studio</option>
+                <option value="VS Code">Visual Studio Code</option>
+                <option value="Cualquiera / Recomendado por el tutor">Recomendado por Joel</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="simulator-footer">
+            <div class="sim-total-display">
+              <span class="sim-total-label">Valor Estimado:</span>
+              <strong class="sim-total-value" id="simTotalValue">$40.000 COP <small>(2 horas)</small></strong>
+            </div>
+            <button type="button" id="simSendWhatsapp" class="btn btn-primary btn-lg">
+              <i data-lucide="send"></i>
+              <span>Enviar Solicitud al WhatsApp (320 943 0835)</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= RESEÑAS DE ESTUDIANTES ================= -->
+    <section class="section reviews-section" id="resenas">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-tag"><i data-lucide="star"></i> Opiniones Reales y Verificadas</span>
+          <h2 class="section-title">Lo que dicen los <span class="gradient-text">Estudiantes y Clientes</span></h2>
+          <p class="section-subtitle">
+            Estudiantes de distintas universidades de Colombia, técnicos e independientes que ya han tomado tutorías de POO, Java, Kotlin y Python. ¡Deja tu reseña abajo!
+          </p>
+        </div>
+
+        <!-- Reviews Summary Dashboard + Form Layout -->
+        <div class="reviews-top-layout">
+          <!-- Rating Overview Card -->
+          <div class="reviews-summary-card reveal-up">
+            <div class="summary-main-score">
+              <div class="big-score" id="avgRatingNumber">4.9</div>
+              <div class="big-stars" id="avgRatingStars" aria-label="Calificación promedio">
+                ★★★★★
+              </div>
+              <p class="total-reviews-label">Basado en <strong id="totalReviewsCount">8</strong> reseñas guardadas</p>
+            </div>
+
+            <div class="rating-bars" id="ratingBarsContainer">
+              <!-- Populated dynamically by JS -->
+            </div>
+
+            <div class="summary-trust-note">
+              <i data-lucide="shield-check"></i>
+              <span>Las reseñas se guardan automáticamente con fecha y universidad o modalidad de estudio.</span>
+            </div>
+          </div>
+
+          <!-- Add Review Form Card -->
+          <div class="review-form-card reveal-up">
+            <div class="form-card-header">
+              <h3><i data-lucide="pen-tool"></i> Dejar una Reseña</h3>
+              <p>Comparte tu experiencia en las tutorías o asesorías. Solo toma 30 segundos.</p>
+            </div>
+
+            <form id="reviewForm" novalidate>
+              <div class="form-row-two">
+                <!-- Nombre -->
+                <div class="form-group">
+                  <label for="reviewerName">Tu Nombre <span class="req">*</span></label>
+                  <div class="input-icon-wrap">
+                    <i data-lucide="user"></i>
+                    <input type="text" id="reviewerName" name="reviewerName" placeholder="Ej. Camilo Andrés Pérez" maxlength="60" autocomplete="name" required />
+                  </div>
+                  <span class="field-error" id="nameError"></span>
+                </div>
+
+                <!-- Universidad / Institución -->
+                <div class="form-group">
+                  <label for="reviewerUniversity">Universidad o Modalidad <span class="req">*</span></label>
+                  <div class="input-icon-wrap">
+                    <i data-lucide="graduation-cap"></i>
+                    <select id="reviewerUniversity" name="reviewerUniversity" required>
+                      <option value="">Selecciona tu universidad o perfil...</option>
+                      <optgroup label="Independiente / Formación Técnica">
+                        <option value="Independiente / Autodidacta">Independiente / Autodidacta (Sin universidad)</option>
+                        <option value="SENA (Técnico / Tecnólogo ADSO)">SENA (Técnico / Tecnólogo)</option>
+                        <option value="Instituto Técnico / Tecnológico">Instituto Técnico / Tecnológico</option>
+                      </optgroup>
+                      <optgroup label="Universidades de Colombia">
+                        <option value="Universidad Nacional de Colombia">Universidad Nacional de Colombia (UNAL)</option>
+                        <option value="Universidad Distrital Francisco José de Caldas">Universidad Distrital Francisco José de Caldas</option>
+                        <option value="Universidad de Antioquia (UdeA)">Universidad de Antioquia (UdeA)</option>
+                        <option value="Universidad del Valle (Univalle)">Universidad del Valle (Univalle)</option>
+                        <option value="Universidad Industrial de Santander (UIS)">Universidad Industrial de Santander (UIS)</option>
+                        <option value="Pontificia Universidad Javeriana">Pontificia Universidad Javeriana</option>
+                        <option value="Universidad de los Andes">Universidad de los Andes</option>
+                        <option value="Universidad Nacional Abierta y a Distancia (UNAD)">Universidad Nacional Abierta y a Distancia (UNAD)</option>
+                        <option value="Politécnico Grancolombiano">Politécnico Grancolombiano</option>
+                        <option value="Universidad del Norte (Uninorte)">Universidad del Norte (Uninorte)</option>
+                        <option value="Universidad EAFIT">Universidad EAFIT</option>
+                        <option value="Universidad Santo Tomás">Universidad Santo Tomás</option>
+                        <option value="Universidad Libre">Universidad Libre</option>
+                        <option value="Universidad Cooperativa de Colombia">Universidad Cooperativa de Colombia</option>
+                        <option value="Universidad Militar Nueva Granada">Universidad Militar Nueva Granada</option>
+                        <option value="Universidad Simón Bolívar">Universidad Simón Bolívar</option>
+                        <option value="Universidad Tecnológica de Pereira (UTP)">Universidad Tecnológica de Pereira (UTP)</option>
+                        <option value="Universidad del Magdalena">Universidad del Magdalena</option>
+                        <option value="Universidad de Pamplona">Universidad de Pamplona</option>
+                        <option value="Universidad Francisco de Paula Santander (UFPS)">Universidad Francisco de Paula Santander (UFPS)</option>
+                        <option value="Otra Universidad">Otra Universidad (Escribir nombre...)</option>
+                      </optgroup>
+                    </select>
+                  </div>
+                  <span class="field-error" id="uniError"></span>
+                </div>
+              </div>
+
+              <!-- Custom University Input (Hidden unless "Otra Universidad" is selected) -->
+              <div class="form-group hidden-group" id="customUniGroup">
+                <label for="customUniversityInput">Nombre de tu Universidad o Instituto <span class="req">*</span></label>
+                <div class="input-icon-wrap">
+                  <i data-lucide="building-2"></i>
+                  <input type="text" id="customUniversityInput" placeholder="Ej. Universidad Autónoma de Bucaramanga (UNAB)" maxlength="80" />
+                </div>
+                <span class="field-error" id="customUniError"></span>
+              </div>
+
+              <!-- Star Rating Interactive Selector -->
+              <div class="form-group">
+                <label>Calificación <span class="req">*</span></label>
+                <div class="star-picker-wrapper">
+                  <div class="star-picker" id="starPicker" role="radiogroup" aria-label="Selecciona de 1 a 5 estrellas">
+                    <button type="button" class="star-btn active" data-value="1" aria-label="1 estrella">★</button>
+                    <button type="button" class="star-btn active" data-value="2" aria-label="2 estrellas">★</button>
+                    <button type="button" class="star-btn active" data-value="3" aria-label="3 estrellas">★</button>
+                    <button type="button" class="star-btn active" data-value="4" aria-label="4 estrellas">★</button>
+                    <button type="button" class="star-btn active" data-value="5" aria-label="5 estrellas">★</button>
+                  </div>
+                  <span class="star-Text-feedback" id="starFeedbackText">5 Estrellas — ¡Excelente tutoría!</span>
+                  <input type="hidden" id="reviewerStars" value="5" />
+                </div>
+                <span class="field-error" id="starsError"></span>
+              </div>
+
+              <!-- Comentario -->
+              <div class="form-group">
+                <div class="label-with-counter">
+                  <label for="reviewerComment">Tu Comentario <span class="req">*</span></label>
+                  <span class="char-counter" id="charCounter">0 / 450</span>
+                </div>
+                <textarea id="reviewerComment" name="reviewerComment" rows="3" maxlength="450" placeholder="Cuéntanos cómo te fue en la tutoría de Java, Kotlin, Python, POO o con tu proyecto..." required></textarea>
+                <span class="field-error" id="commentError"></span>
+              </div>
+
+              <div class="form-submit-row">
+                <div class="auto-date-preview">
+                  <i data-lucide="calendar"></i>
+                  <span>Fecha de registro: <strong id="currentDatePreview">Hoy</strong></span>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                  <i data-lucide="check-circle"></i>
+                  <span>Publicar y Guardar Reseña</span>
+                </button>
+              </div>
+
+              <!-- Toast / Feedback Banner -->
+              <div class="review-success-banner" id="reviewSuccessBanner" role="status" aria-live="polite" hidden>
+                <i data-lucide="party-popper"></i>
+                <span>¡Gracias! Tu reseña ha sido validada y guardada exitosamente.</span>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Filter & Search Bar for Reviews -->
+        <div class="reviews-filter-bar reveal-up">
+          <div class="filter-pills" role="tablist">
+            <button type="button" class="filter-pill active" data-filter="all">Todas las reseñas</button>
+            <button type="button" class="filter-pill" data-filter="5">5 Estrellas ★</button>
+            <button type="button" class="filter-pill" data-filter="uni">Universitarios</button>
+            <button type="button" class="filter-pill" data-filter="ind">Técnicos &amp; Independientes</button>
+          </div>
+          <div class="reviews-search-box">
+            <i data-lucide="search"></i>
+            <input type="search" id="reviewSearchInput" placeholder="Buscar por universidad, Java, Kotlin, POO..." />
+          </div>
+        </div>
+
+        <!-- Reviews Grid -->
+        <div class="reviews-grid" id="reviewsGrid">
+          <!-- Rendered dynamically via app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FINAL CTA SECTION ================= -->
+    <section class="section cta-banner-section">
+      <div class="container">
+        <div class="cta-banner-card reveal-up">
+          <div class="cta-banner-content">
+            <span class="cta-pill"><i data-lucide="zap"></i> Respuesta Rápida por WhatsApp</span>
+            <h2>¿Listo para dominar tu materia de programación o sacar adelante tu proyecto?</h2>
+            <p>
+              Escríbeme directamente al <strong>320 943 0835</strong>. Cuéntame en qué lenguaje estás trabajando (Java, Kotlin, Python) o si quieres empezar desde cero absoluto.
+            </p>
+            <div class="cta-banner-buttons">
+              <a href="https://wa.me/573209430835?text=Hola%20Joel%2C%20vengo%20de%20tu%20landing%20page%20y%20quiero%20agendar%20una%20asesor%C3%ADa." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
+                <i data-lucide="message-circle"></i>
+                <span>Hablar por WhatsApp (+57 320 943 0835)</span>
+              </a>
+              <a href="https://www.linkedin.com/in/joelru?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="btn btn-glass btn-lg">
+                <i data-lucide="linkedin"></i>
+                <span>Ver Perfil en LinkedIn</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="brand-logo">
+          <div class="brand-avatar-mini">
+            <img src="ProfileAvatar.png" alt="Juan Joel Navarro Vargas" />
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">Juan Joel <span>Navarro Vargas</span></span>
+            <span class="brand-role">Ing. IA y Ciencia de Datos • Desarrollador de Software</span>
+          </div>
+        </div>
+        <p class="footer-bio">
+          Tutorías personalizadas de programación (Java, Kotlin, Python), especialista certificado en POO, arquitecturas MVC/MVP y desarrollo de software con +4 años de experiencia.
+        </p>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#sobre-mi">Sobre Mí &amp; Metodología</a></li>
+          <li><a href="#tecnologias">Lenguajes e IDEs</a></li>
+          <li><a href="#proyectos">Portafolio de Proyectos</a></li>
+          <li><a href="#precios">Precios ($20.000 COP/h)</a></li>
+          <li><a href="#resenas">Reseñas de Estudiantes</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>Proyectos &amp; Redes</h4>
+        <ul>
+          <li><a href="https://findpethouse.vercel.app/" target="_blank" rel="noopener noreferrer">FindPetHouse (Plataforma Digital)</a></li>
+          <li><a href="https://kronotech.vercel.app/" target="_blank" rel="noopener noreferrer">KronoTech (E-Commerce)</a></li>
+          <li><a href="https://github.com/Joelru" target="_blank" rel="noopener noreferrer">GitHub (@Joelru)</a></li>
+          <li><a href="https://www.linkedin.com/in/joelru?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer">LinkedIn Oficial</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-col">
+        <h4>Contacto Directo</h4>
+        <ul class="footer-contact-list">
+          <li>
+            <i data-lucide="phone"></i>
+            <a href="https://wa.me/573209430835" target="_blank" rel="noopener noreferrer">+57 320 943 0835 (WhatsApp)</a>
+          </li>
+          <li>
+            <i data-lucide="dollar-sign"></i>
+            <span>Tutorías: $20.000 COP / hora</span>
+          </li>
+          <li>
+            <i data-lucide="code"></i>
+            <span>Proyectos: Precio en COP según alcance</span>
+          </li>
+          <li>
+            <i data-lucide="map-pin"></i>
+            <span>Colombia (Tutorías Online a todo el país)</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>© <span id="currentYear">2026</span> <strong>Juan Joel Navarro Vargas</strong>. Todos los derechos reservados.</p>
+      <p class="footer-made">Diseñado con enfoque moderno para GitHub Pages</p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Quick Button -->
+  <a href="https://wa.me/573209430835?text=Hola%20Joel%2C%20vi%20tu%20perfil%20de%20profesor%20de%20programaci%C3%B3n%20y%20quiero%20hacerte%20una%20consulta." target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Contactar por WhatsApp al 3209430835">
+    <span class="wa-tooltip">¿Dudas o Proyectos? ¡Escríbeme!</span>
+    <div class="wa-icon-circle">
+      <svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.004 3.2c-7.07 0-12.8 5.73-12.8 12.8 0 2.257.59 4.46 1.71 6.404L3.2 28.8l6.564-1.693a12.74 12.74 0 0 0 6.24 1.627h.005c7.068 0 12.796-5.73 12.796-12.8 0-3.42-1.332-6.636-3.75-9.054A12.712 12.712 0 0 0 16.004 3.2zm0 23.374h-.004a10.6 10.6 0 0 1-5.402-1.478l-.388-.23-3.895 1.005 1.04-3.797-.253-.402a10.576 10.576 0 0 1-1.628-5.672c0-5.853 4.763-10.616 10.62-10.616 2.836 0 5.502 1.105 7.506 3.11a10.55 10.55 0 0 1 3.108 7.508c0 5.855-4.765 10.616-10.704 10.572zm5.825-7.95c-.318-.16-1.888-.932-2.18-1.038-.293-.107-.506-.16-.72.16-.212.32-.824 1.038-1.01 1.25-.186.214-.373.24-.692.08-.32-.16-1.348-.497-2.567-1.584-.949-.846-1.59-1.892-1.776-2.212-.186-.32-.02-.492.14-.651.144-.143.32-.373.479-.56.16-.186.213-.32.32-.532.106-.213.053-.4-.027-.56-.08-.16-.72-1.732-.986-2.372-.26-.623-.524-.538-.72-.548l-.612-.01c-.213 0-.56.08-.852.4-.293.32-1.12 1.093-1.12 2.665s1.146 3.09 1.305 3.304c.16.213 2.255 3.443 5.462 4.828.763.33 1.358.526 1.823.674.766.243 1.463.209 2.014.126.615-.092 1.888-.772 2.155-1.518.266-.746.266-1.385.186-1.518-.08-.133-.293-.213-.612-.373z"/></svg>
+    </div>
+  </a>
+
+  <script src="app.js"></script>
+</body>
+</html>
