@@ -459,6 +459,23 @@ textarea {
   transform: translateY(-2px);
 }
 
+/* Hide mobile-only CTA button on Desktop (must come after .btn) */
+.btn.mobile-nav-cta,
+.mobile-nav-cta {
+  display: none;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.nav-cta {
+  flex-shrink: 0;
+}
+
 /* ================= NAVBAR ================= */
 .navbar {
   position: fixed;
@@ -2983,7 +3000,7 @@ textarea {
   }
 }
 
-@media (max-width: 820px) {
+@media (max-width: 960px) {
   .nav-links {
     position: fixed;
     top: 72px;
@@ -3023,6 +3040,7 @@ textarea {
     font-size: 0.96rem;
   }
 
+  .btn.mobile-nav-cta,
   .mobile-nav-cta {
     display: inline-flex;
     width: 100%;
