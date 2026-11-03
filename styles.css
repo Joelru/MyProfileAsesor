@@ -97,6 +97,9 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 90px;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -104,9 +107,21 @@ body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
   line-height: 1.65;
+  width: 100%;
+  max-width: 100%;
   overflow-x: hidden;
+  position: relative;
   transition: background-color 0.35s ease, color 0.35s ease;
   -webkit-font-smoothing: antialiased;
+}
+
+header,
+main,
+section,
+footer {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
 }
 
 img {
@@ -355,17 +370,25 @@ textarea {
   display: none;
 }
 
-/* Prevent CSS Grid blowout on narrow mobile viewports */
+/* Prevent CSS Grid & Flex blowout on narrow mobile viewports */
 .hero-content,
 .hero-visual,
+.profile-showcase-wrapper,
+.profile-card-main,
+.profile-card-body,
+.profile-code-box,
+.ide-window,
+.ide-body,
 .bento-card,
 .tech-card,
 .project-card,
 .pricing-card,
+.simulator-box,
 .reviews-summary-card,
 .review-form-card,
 .review-card {
   min-width: 0;
+  max-width: 100%;
 }
 
 /* ================= BUTTONS ================= */
@@ -731,19 +754,21 @@ textarea {
 
 /* Animated Typewriter Box */
 .hero-typewriter-box {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 10px;
-  padding: 10px 18px;
+  padding: 10px 16px;
   margin-bottom: 20px;
   border-radius: var(--radius-md);
   background: var(--surface-code);
   border: 1px solid rgba(45, 212, 191, 0.35);
   box-shadow: 0 8px 24px -4px rgba(13, 148, 136, 0.22);
   font-family: var(--font-mono);
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   color: #f0fdfa;
+  width: 100%;
   max-width: 100%;
+  overflow: hidden;
 }
 
 .typewriter-prefix {
@@ -755,6 +780,8 @@ textarea {
 .typewriter-text {
   color: #e2e8f0;
   font-weight: 500;
+  min-width: 0;
+  word-break: break-word;
 }
 
 .typewriter-cursor {
@@ -2851,15 +2878,23 @@ textarea {
 /* ================= WHATSAPP FLOATING BUTTON ================= */
 .whatsapp-float {
   position: fixed;
-  bottom: 24px;
-  right: 24px;
-  z-index: 99;
+  bottom: 22px;
+  right: 22px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  z-index: 9999;
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
+  pointer-events: auto;
 }
 
 .wa-tooltip {
+  position: absolute;
+  right: 70px;
+  top: 50%;
+  transform: translateY(-50%);
   background: var(--surface-card-solid);
   color: var(--text-primary);
   padding: 8px 14px;
@@ -2868,6 +2903,8 @@ textarea {
   font-weight: 700;
   box-shadow: var(--shadow-md);
   border: 1px solid var(--border-subtle);
+  white-space: nowrap;
+  pointer-events: none;
   transition: var(--transition-fast);
 }
 
@@ -2880,7 +2917,7 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.42);
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.45);
   transition: var(--transition-fast);
 }
 
@@ -3221,9 +3258,35 @@ textarea {
     animation: none;
   }
 
+  /* Profile Card Mobile */
   .profile-showcase-wrapper {
     display: flex;
     flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .profile-card-main {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .profile-code-box pre,
+  .ide-body pre {
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-x: hidden;
+  }
+
+  .btn {
+    white-space: normal;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .browser-bar {
+    flex-wrap: wrap;
+    gap: 6px;
   }
 
   /* Grids & Cards Mobile */
@@ -3324,12 +3387,15 @@ textarea {
 
   /* Floating WhatsApp Button Mobile */
   .whatsapp-float {
+    position: fixed;
     bottom: 16px;
     right: 16px;
+    width: 52px;
+    height: 52px;
   }
 
   .wa-tooltip {
-    display: none;
+    display: none !important;
   }
 
   .wa-icon-circle {
