@@ -134,6 +134,19 @@ textarea {
   padding: 0 24px;
 }
 
+/* Top Scroll Progress Bar */
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 0%;
+  background: linear-gradient(90deg, #10b981, #0d9488, #0284c7, #6366f1);
+  box-shadow: 0 0 14px rgba(13, 148, 136, 0.8);
+  z-index: 200;
+  transition: width 0.08s linear;
+}
+
 /* ================= ANIMATED BACKGROUND ================= */
 .bg-canvas-wrapper {
   position: fixed;
@@ -148,7 +161,7 @@ textarea {
   inset: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.65;
+  opacity: 0.92;
 }
 
 .aurora-blob {
@@ -207,19 +220,21 @@ textarea {
 .code-sym {
   position: absolute;
   font-family: var(--font-mono);
-  font-weight: 600;
-  font-size: 0.85rem;
+  font-weight: 700;
+  font-size: 0.88rem;
   color: var(--accent-primary);
-  opacity: 0.14;
-  padding: 6px 12px;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--border-strong);
-  background: var(--accent-soft-bg);
-  animation: driftSymbol 16s ease-in-out infinite alternate;
+  opacity: 0.32;
+  padding: 7px 14px;
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--border-strong);
+  background: var(--surface-card);
+  box-shadow: 0 6px 20px rgba(13, 148, 136, 0.14);
+  backdrop-filter: blur(6px);
+  animation: driftSymbol 11s ease-in-out infinite alternate;
 }
 
 [data-theme="dark"] .code-sym {
-  opacity: 0.18;
+  opacity: 0.36;
 }
 
 .sym-1 { top: 15%; left: 6%; animation-duration: 14s; }
@@ -909,14 +924,24 @@ textarea {
 
 .profile-card-main {
   background: var(--surface-card-solid);
-  border: 1.5px solid var(--border-strong);
+  border: 2px solid var(--border-strong);
   border-radius: var(--radius-xl);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
+  animation: cardGentleFloat 6s ease-in-out infinite alternate;
+}
+
+@keyframes cardGentleFloat {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
 }
 
 .profile-card-banner {
-  height: 118px;
+  height: 112px;
   overflow: hidden;
   position: relative;
   background: #041e24;
@@ -933,18 +958,19 @@ textarea {
 }
 
 .profile-card-main:hover .profile-card-banner img {
-  transform: scale(1.04);
+  transform: scale(1.05);
 }
 
 .profile-card-body {
-  padding: 22px 24px 24px;
+  padding: 20px 24px 24px;
 }
 
-/* Cleanly Organized Side-by-Side Avatar + Identity Header */
-.profile-header-layout {
+/* Centered & Spacious Avatar + Identity Header (Zero Crowding) */
+.profile-header-centered {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 18px;
+  text-align: center;
   padding-bottom: 18px;
   margin-bottom: 18px;
   border-bottom: 1px solid var(--border-subtle);
@@ -952,19 +978,29 @@ textarea {
 
 .profile-avatar-ring {
   position: relative;
-  width: 96px;
-  height: 96px;
-  min-width: 96px;
-  min-height: 96px;
+  width: 112px;
+  height: 112px;
+  min-width: 112px;
+  min-height: 112px;
   aspect-ratio: 1 / 1;
   flex-shrink: 0;
   border-radius: 50%;
-  padding: 3.5px;
-  background: linear-gradient(135deg, var(--accent-primary), var(--accent-light), var(--accent-secondary));
-  box-shadow: 0 10px 24px rgba(13, 148, 136, 0.3);
+  padding: 4px;
+  margin-top: -66px;
+  margin-bottom: 14px;
+  background: linear-gradient(135deg, #10b981, #0d9488, #0284c7, #6366f1);
+  background-size: 200% 200%;
+  animation: ringGradientFlow 4s ease infinite;
+  box-shadow: 0 12px 28px rgba(6, 59, 71, 0.38);
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@keyframes ringGradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .profile-main-img {
@@ -974,17 +1010,17 @@ textarea {
   border-radius: 50%;
   object-fit: cover;
   object-position: center;
-  border: 3px solid var(--surface-card-solid);
+  border: 3.5px solid var(--surface-card-solid);
   background: #063b47;
   display: block;
 }
 
 .avatar-online-badge {
   position: absolute;
-  bottom: 4px;
-  right: 4px;
-  width: 16px;
-  height: 16px;
+  bottom: 5px;
+  right: 5px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
   background: #10b981;
   border: 3px solid var(--surface-card-solid);
@@ -992,54 +1028,66 @@ textarea {
   animation: pulseDot 2s infinite;
 }
 
-.profile-identity {
+.profile-identity-centered {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 5px;
-  min-width: 0;
-}
-
-.verified-mentor-badge {
-  display: inline-flex;
   align-items: center;
-  gap: 5px;
-  padding: 4px 11px;
-  border-radius: var(--radius-full);
-  background: var(--accent-soft-bg);
-  color: var(--accent-primary);
-  font-size: 0.73rem;
-  font-weight: 700;
-  border: 1px solid var(--border-strong);
+  gap: 6px;
+  width: 100%;
 }
 
-.verified-mentor-badge svg {
-  width: 13px;
-  height: 13px;
-}
-
-.profile-identity h2 {
+.profile-identity-centered h2 {
   font-family: var(--font-display);
-  font-size: 1.24rem;
+  font-size: 1.38rem;
   font-weight: 700;
   line-height: 1.2;
   color: var(--text-primary);
-  letter-spacing: -0.01em;
+  letter-spacing: -0.015em;
 }
 
 .profile-subtitle {
-  font-size: 0.88rem;
+  font-size: 0.92rem;
   font-weight: 600;
   color: var(--accent-primary);
-  line-height: 1.25;
-  margin: 0;
+  line-height: 1.3;
+  margin: 0 0 6px;
 }
 
-.profile-exp-tag {
-  font-size: 0.78rem;
-  color: var(--text-muted);
-  font-weight: 500;
-  line-height: 1.2;
+.profile-badges-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.verified-mentor-badge,
+.exp-mentor-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.verified-mentor-badge {
+  background: var(--accent-soft-bg);
+  color: var(--accent-primary);
+  border: 1px solid var(--border-strong);
+}
+
+.exp-mentor-badge {
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-subtle);
+}
+
+.verified-mentor-badge svg,
+.exp-mentor-badge svg {
+  width: 14px;
+  height: 14px;
 }
 
 .profile-code-box {
@@ -3104,19 +3152,18 @@ textarea {
   }
 
   /* Profile Card Mobile */
-  .profile-header-layout {
-    flex-direction: row;
-    align-items: center;
-    gap: 14px;
+  .profile-header-centered {
     padding-bottom: 14px;
     margin-bottom: 14px;
   }
 
   .profile-avatar-ring {
-    width: 82px;
-    height: 82px;
-    min-width: 82px;
-    min-height: 82px;
+    width: 98px;
+    height: 98px;
+    min-width: 98px;
+    min-height: 98px;
+    margin-top: -58px;
+    margin-bottom: 12px;
     border-radius: 50%;
   }
 
@@ -3126,17 +3173,18 @@ textarea {
     border-radius: 50%;
   }
 
-  .profile-identity h2 {
-    font-size: 1.08rem;
+  .profile-identity-centered h2 {
+    font-size: 1.22rem;
   }
 
   .profile-subtitle {
-    font-size: 0.82rem;
+    font-size: 0.85rem;
   }
 
-  .verified-mentor-badge {
-    font-size: 0.69rem;
-    padding: 3px 9px;
+  .verified-mentor-badge,
+  .exp-mentor-badge {
+    font-size: 0.72rem;
+    padding: 4px 10px;
   }
 
   .profile-card-body {

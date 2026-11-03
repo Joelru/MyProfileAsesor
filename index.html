@@ -22,10 +22,13 @@
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" type="image/png" href="ProfileAvatar.png" />
+  <link rel="stylesheet" href="styles.css?v=4.0" />
+  <link rel="icon" type="image/png" href="ProfileAvatar.png?v=4.0" />
 </head>
 <body>
+  <!-- Top Scroll Progress Bar -->
+  <div class="scroll-progress-bar" id="scrollProgressBar" aria-hidden="true"></div>
+
   <!-- Animated Background Layer -->
   <div class="bg-canvas-wrapper" aria-hidden="true">
     <div class="aurora-blob blob-1"></div>
@@ -48,21 +51,21 @@
     <div class="container nav-container">
       <a href="#inicio" class="brand-logo" aria-label="Inicio - Joel Navarro">
         <div class="brand-avatar-mini">
-          <img src="ProfileAvatar.png" alt="Juan Joel Navarro Vargas" />
+          <img src="ProfileAvatar.png?v=4.0" alt="Juan Joel Navarro Vargas" />
           <span class="status-dot" title="Disponible para tutorías"></span>
         </div>
         <div class="brand-text">
           <span class="brand-name">Joel <span>Navarro</span></span>
-          <span class="brand-role">Mentor &amp; Software Dev</span>
+          <span class="brand-role">Profesor de Programación</span>
         </div>
       </a>
 
       <nav class="nav-links" id="navLinks" aria-label="Navegación principal">
         <a href="#inicio" class="nav-link active">Inicio</a>
         <a href="#sobre-mi" class="nav-link">Sobre Mí</a>
-        <a href="#tecnologias" class="nav-link">Tecnologías &amp; IDEs</a>
+        <a href="#tecnologias" class="nav-link">Tecnologías</a>
         <a href="#proyectos" class="nav-link">Proyectos</a>
-        <a href="#precios" class="nav-link">Precios (COP)</a>
+        <a href="#precios" class="nav-link">Precios</a>
         <a href="#resenas" class="nav-link">Reseñas <span class="nav-badge" id="navReviewCount">8</span></a>
         <a href="https://wa.me/573209430835?text=Hola%20Joel%2C%20vi%20tu%20p%C3%A1gina%20web%20y%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20las%20tutor%C3%ADas%20de%20programaci%C3%B3n%20(%2420.000%20COP%2Fhora)." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm mobile-nav-cta">
           <i data-lucide="message-circle"></i>
@@ -182,25 +185,29 @@
             <div class="profile-card-main">
               <div class="profile-card-banner">
                 <img src="SimpleBanner.png" alt="Banner Backend & Android Developer - Joel Navarro" />
-                <div class="banner-overlay-gradient"></div>
               </div>
 
               <div class="profile-card-body">
-                <!-- Cleanly Organized Avatar + Identity Header -->
-                <div class="profile-header-layout">
+                <!-- Centered & Spacious Avatar + Identity Header (Zero Crowding) -->
+                <div class="profile-header-centered">
                   <div class="profile-avatar-ring">
-                    <img src="ProfileAvatar.png" alt="Juan Joel Navarro Vargas - Profesor de Programación y Desarrollador de Software" class="profile-main-img" />
+                    <img src="ProfileAvatar.png?v=4.0" alt="Juan Joel Navarro Vargas - Profesor de Programación y Desarrollador de Software" class="profile-main-img" />
                     <span class="avatar-online-badge" title="Disponible en línea"></span>
                   </div>
 
-                  <div class="profile-identity">
-                    <div class="verified-mentor-badge" title="Certificado en Programación Orientada a Objetos">
-                      <i data-lucide="shield-check"></i>
-                      <span>Certificado en POO</span>
-                    </div>
+                  <div class="profile-identity-centered">
                     <h2>Juan Joel Navarro Vargas</h2>
-                    <p class="profile-subtitle">Ing. en IA y Ciencia de Datos</p>
-                    <span class="profile-exp-tag">Backend &amp; Mobile Developer • +4 Años</span>
+                    <p class="profile-subtitle">Ingeniería en IA y Ciencia de Datos</p>
+                    <div class="profile-badges-row">
+                      <span class="verified-mentor-badge" title="Certificado en Programación Orientada a Objetos">
+                        <i data-lucide="shield-check"></i>
+                        <span>Certificado POO</span>
+                      </span>
+                      <span class="exp-mentor-badge">
+                        <i data-lucide="code-2"></i>
+                        <span>+4 Años Software Dev</span>
+                      </span>
+                    </div>
                   </div>
                 </div>
 
@@ -1049,11 +1056,11 @@
       <div class="footer-brand">
         <div class="brand-logo footer-brand-logo">
           <div class="brand-avatar-mini">
-            <img src="ProfileAvatar.png" alt="Juan Joel Navarro Vargas" />
+            <img src="ProfileAvatar.png?v=4.0" alt="Juan Joel Navarro Vargas" />
           </div>
           <div class="brand-text">
             <span class="brand-name">Juan Joel <span>Navarro</span></span>
-            <span class="brand-role">Ing. IA y Ciencia de Datos • Software Dev</span>
+            <span class="brand-role">Profesor de Programación &amp; Dev</span>
           </div>
         </div>
         <p class="footer-bio">
@@ -1120,6 +1127,6 @@
     </div>
   </a>
 
-  <script src="app.js"></script>
+  <script src="app.js?v=4.0"></script>
 </body>
 </html>

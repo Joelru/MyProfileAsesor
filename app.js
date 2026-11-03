@@ -62,6 +62,15 @@ function initNavbar() {
       navbar.classList.remove("scrolled");
     }
 
+    // Update top scroll progress bar
+    const progressBar = document.getElementById("scrollProgressBar");
+    if (progressBar) {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const pct = docHeight > 0 ? Math.min(100, (scrollTop / docHeight) * 100) : 0;
+      progressBar.style.width = `${pct}%`;
+    }
+
     // Active link on scroll
     let currentSection = "";
     sections.forEach((sec) => {
@@ -148,7 +157,7 @@ function initTypewriter() {
   setTimeout(() => {
     isDeleting = true;
     tick();
-  }, 2600);
+  }, 600);
 }
 
 function initCardSpotlight() {
@@ -235,9 +244,9 @@ function initCanvasBackground() {
   let width = (canvas.width = window.innerWidth);
   let height = (canvas.height = window.innerHeight);
 
-  const particleCount = Math.min(48, Math.floor((width * height) / 28000));
+  const particleCount = Math.min(62, Math.floor((width * height) / 21000));
   const particles = [];
-  const mouse = { x: null, y: null, radius: 140 };
+  const mouse = { x: null, y: null, radius: 175 };
 
   window.addEventListener("mousemove", (e) => {
     mouse.x = e.clientX;
@@ -258,16 +267,16 @@ function initCanvasBackground() {
     particles.push({
       x: Math.random() * width,
       y: Math.random() * height,
-      vx: (Math.random() - 0.5) * 0.45,
-      vy: (Math.random() - 0.5) * 0.45,
-      size: Math.random() * 2 + 1.2
+      vx: (Math.random() - 0.5) * 0.75,
+      vy: (Math.random() - 0.5) * 0.75,
+      size: Math.random() * 2.4 + 1.5
     });
   }
 
   function animate() {
     ctx.clearRect(0, 0, width, height);
     const isDark = document.documentElement.getAttribute("data-theme") === "dark";
-    const dotColor = isDark ? "rgba(45, 212, 191, 0.42)" : "rgba(13, 148, 136, 0.32)";
+    const dotColor = isDark ? "rgba(45, 212, 191, 0.62)" : "rgba(13, 148, 136, 0.48)";
 
     for (let i = 0; i < particles.length; i++) {
       const p = particles[i];
@@ -289,31 +298,31 @@ function initCanvasBackground() {
         const dy = p.y - p2.y;
         const dist = Math.sqrt(dx * dx + dy * dy);
 
-        if (dist < 145) {
-          const alpha = (1 - dist / 145) * (isDark ? 0.16 : 0.12);
+        if (dist < 160) {
+          const alpha = (1 - dist / 160) * (isDark ? 0.28 : 0.22);
           ctx.beginPath();
           ctx.moveTo(p.x, p.y);
           ctx.lineTo(p2.x, p2.y);
           ctx.strokeStyle = isDark
             ? `rgba(45, 212, 191, ${alpha})`
             : `rgba(13, 148, 136, ${alpha})`;
-          ctx.lineWidth = 1;
+          ctx.lineWidth = 1.2;
           ctx.stroke();
         }
       }
 
-      // Subtle mouse connection
+      // Mouse connection
       if (mouse.x !== null && mouse.y !== null) {
         const dx = p.x - mouse.x;
         const dy = p.y - mouse.y;
         const dist = Math.sqrt(dx * dx + dy * dy);
         if (dist < mouse.radius) {
-          const alpha = (1 - dist / mouse.radius) * 0.28;
+          const alpha = (1 - dist / mouse.radius) * 0.45;
           ctx.beginPath();
           ctx.moveTo(p.x, p.y);
           ctx.lineTo(mouse.x, mouse.y);
           ctx.strokeStyle = `rgba(14, 165, 233, ${alpha})`;
-          ctx.lineWidth = 1.1;
+          ctx.lineWidth = 1.5;
           ctx.stroke();
         }
       }
