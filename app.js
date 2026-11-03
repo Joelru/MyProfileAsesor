@@ -11,7 +11,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   initTheme();
   initNavbar();
+  initTypewriter();
   initScrollReveal();
+  initCardSpotlight();
   initHeroTilt();
   initCanvasBackground();
   initCodeShowcase();
@@ -101,10 +103,86 @@ function initNavbar() {
 }
 
 /* ==========================================================================
-   3. SCROLL REVEAL ANIMATIONS
+   3. SCROLL REVEAL (Staggered Cascade) + TYPEWRITER + CARD SPOTLIGHT
    ========================================================================== */
+function initTypewriter() {
+  const el = document.getElementById("typewriterText");
+  if (!el) return;
+
+  const phrases = [
+    "Especialista Certificado en Programación Orientada a Objetos (POO)",
+    "Tutorías de Java, Kotlin, Android Studio & Python desde Cero",
+    "Arquitecturas de Software Limpias: Patrones MVC y MVP",
+    "Asesoría 1 a 1 en IntelliJ IDEA, NetBeans, Android Studio y VS Code"
+  ];
+
+  let phraseIdx = 0;
+  let charIdx = phrases[0].length;
+  let isDeleting = false;
+
+  function tick() {
+    const currentPhrase = phrases[phraseIdx];
+
+    if (!isDeleting) {
+      charIdx++;
+      el.textContent = currentPhrase.substring(0, charIdx);
+      if (charIdx >= currentPhrase.length) {
+        isDeleting = true;
+        setTimeout(tick, 2400);
+        return;
+      }
+      setTimeout(tick, 38);
+    } else {
+      charIdx--;
+      el.textContent = currentPhrase.substring(0, charIdx);
+      if (charIdx <= 0) {
+        isDeleting = false;
+        phraseIdx = (phraseIdx + 1) % phrases.length;
+        setTimeout(tick, 320);
+        return;
+      }
+      setTimeout(tick, 20);
+    }
+  }
+
+  setTimeout(() => {
+    isDeleting = true;
+    tick();
+  }, 2600);
+}
+
+function initCardSpotlight() {
+  const cards = document.querySelectorAll(
+    ".stat-card, .bento-card, .tech-card, .project-card, .pricing-card, .review-card"
+  );
+
+  cards.forEach((card) => {
+    if (card.dataset.spotlightBound) return;
+    card.dataset.spotlightBound = "true";
+
+    card.addEventListener("mousemove", (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.setProperty("--mouse-x", `${x}px`);
+      card.style.setProperty("--mouse-y", `${y}px`);
+    });
+  });
+}
+
 function initScrollReveal() {
   const revealElements = document.querySelectorAll(".reveal-up, .reveal-scale");
+
+  // Add subtle stagger delay to sibling cards in grids
+  const grids = document.querySelectorAll(
+    ".stats-grid, .tech-cards-grid, .projects-grid, .pricing-layout, .about-bento-grid"
+  );
+  grids.forEach((grid) => {
+    const children = grid.querySelectorAll(".reveal-up, .reveal-scale");
+    children.forEach((child, idx) => {
+      child.style.setProperty("--reveal-delay", `${idx * 95}ms`);
+    });
+  });
 
   const observer = new IntersectionObserver(
     (entries) => {
@@ -115,7 +193,7 @@ function initScrollReveal() {
         }
       });
     },
-    { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+    { threshold: 0.1, rootMargin: "0px 0px -30px 0px" }
   );
 
   revealElements.forEach((el) => observer.observe(el));
@@ -896,6 +974,7 @@ function initReviewsSystem() {
       .join("");
 
     if (window.lucide) window.lucide.createIcons();
+    initCardSpotlight();
   }
 
   // Filter Pills & Search Listeners
