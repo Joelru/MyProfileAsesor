@@ -752,19 +752,23 @@ textarea {
   margin-bottom: 16px;
 }
 
-/* Animated Typewriter Box */
+/* Animated Typewriter Box (Locked Fixed Height to Prevent Layout/Scroll Shift) */
 .hero-typewriter-box {
   display: flex;
   align-items: center;
   gap: 10px;
   padding: 10px 16px;
   margin-bottom: 20px;
+  height: 52px;
+  min-height: 52px;
+  max-height: 52px;
   border-radius: var(--radius-md);
   background: var(--surface-code);
   border: 1px solid rgba(45, 212, 191, 0.35);
   box-shadow: 0 8px 24px -4px rgba(13, 148, 136, 0.22);
   font-family: var(--font-mono);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
+  line-height: 1.35;
   color: #f0fdfa;
   width: 100%;
   max-width: 100%;
@@ -777,10 +781,16 @@ textarea {
   flex-shrink: 0;
 }
 
+.typewriter-line {
+  display: block;
+  min-width: 0;
+  flex: 1;
+  overflow: hidden;
+}
+
 .typewriter-text {
   color: #e2e8f0;
   font-weight: 500;
-  min-width: 0;
   word-break: break-word;
 }
 
@@ -3156,6 +3166,14 @@ textarea {
   .hero-title {
     font-size: 2rem;
     line-height: 1.16;
+  }
+
+  .hero-typewriter-box {
+    height: 66px;
+    min-height: 66px;
+    max-height: 66px;
+    font-size: 0.8rem;
+    padding: 8px 14px;
   }
 
   .hero-description {

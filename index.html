@@ -22,8 +22,8 @@
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
-  <link rel="stylesheet" href="styles.css?v=6.0" />
-  <link rel="icon" type="image/png" href="ProfileAvatar.png?v=6.0" />
+  <link rel="stylesheet" href="styles.css?v=7.0" />
+  <link rel="icon" type="image/png" href="ProfileAvatar.png?v=7.0" />
 </head>
 <body>
   <!-- Top Scroll Progress Bar -->
@@ -106,11 +106,10 @@
             Domina la <span class="gradient-text">Programación y POO</span> con mentorías personalizadas a tu ritmo.
           </h1>
 
-          <!-- Animated Dynamic Typewriter Line -->
-          <div class="hero-typewriter-box" aria-live="polite">
+          <!-- Animated Dynamic Typewriter Line (Fixed Height = Zero Scroll Shift) -->
+          <div class="hero-typewriter-box" aria-live="off">
             <span class="typewriter-prefix">&gt;_</span>
-            <span class="typewriter-text" id="typewriterText">Especialista en Programación Orientada a Objetos (POO)</span>
-            <span class="typewriter-cursor">|</span>
+            <span class="typewriter-line"><span class="typewriter-text" id="typewriterText">Especialista en Programación Orientada a Objetos (POO)</span><span class="typewriter-cursor">|</span></span>
           </div>
 
           <p class="hero-description">
@@ -1127,6 +1126,6 @@
     </div>
   </a>
 
-  <script src="app.js?v=6.0"></script>
+  <script src="app.js?v=7.0"></script>
 </body>
 </html>
